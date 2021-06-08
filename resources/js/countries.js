@@ -238,6 +238,8 @@ createCountryList();
 
 // SHOW AND HIDE COUNTRY LIST
 change_country_btn.addEventListener("click", function () {
+  input.value = "";
+  resetCountryList();
   search_country_element.classList.toggle("hide");
   search_country_element.classList.add("fadeIn");
 });
@@ -262,3 +264,10 @@ input.addEventListener("input", function () {
     }
   });
 });
+
+// RESET COUNTRY SEARCH LIST
+function resetCountryList() {
+  country_list.forEach((country) => {
+    document.getElementById(country.name).classList.remove("hide");
+  });
+}
