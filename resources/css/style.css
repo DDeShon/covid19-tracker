@@ -153,3 +153,128 @@ main {
 }
 
 /* ------------ CHART ------------ */
+.chart {
+  width: 80%;
+  height: 70vh;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* ------------ SEARCH COUNTRY ------------ */
+.search-country {
+  position: relative;
+  top: 10px;
+}
+
+.search-box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 30px;
+  background-color: hsl(0, 0%, 7%);
+  z-index: 1;
+}
+
+.search-box input {
+  width: 360px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+  padding-left: 15px;
+  font-size: 1.1rem;
+}
+
+.search-box img {
+  width: 20px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.country-list {
+  display: flex;
+  /* justify-content: space-between; */
+  position: absolute;
+  top: 30px;
+  width: 400px;
+  height: 300px;
+  background-color: hsl(0, 0%, 7%);
+  opacity: 0.9;
+  overflow-y: scroll;
+}
+
+.country-list ul {
+  width: 100%;
+}
+
+.country-list ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  color: hsl(0, 0%, 100%);
+}
+
+.country-list ul li:hover {
+  border-left: 1px solid hsl(0, 0%, 100%);
+}
+
+/* ------------ SCROLL BAR ------------ */
+.country-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* ------------ TRACK ------------ */
+.country-list::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 7%);
+}
+
+/* ------------ HANDLE ------------ */
+.country-list::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 100%);
+}
+
+/* ------------ HANDLE HOVER ------------ */
+.country-list::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 33%);
+}
+
+/* ---------------------------------------------------------- */
+/*                           FOOTER                           */
+/* ---------------------------------------------------------- */
+footer {
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: hsl(0, 76%, 70%);
+}
+
+.footer-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.copyright p {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------- */
+/*                    SCREEN WIDTH < 600px                    */
+/* ---------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .latest-report {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

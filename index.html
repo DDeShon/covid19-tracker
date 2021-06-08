@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./resources/css/style.css" />
+    <script defer src="./resources/js/app.js"></script>
+    <script defer src="./resources/js/countries.js"></script>
     <title>Covid-19 Tracker</title>
   </head>
   <body>
@@ -31,6 +33,17 @@
           <div class="country">
             <div class="name">Loading...</div>
             <div class="change-country">change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src="./resources/img/close.svg" alt="" />
+              </div>
+              <div class="country-list"></div>
+            </div>
           </div>
           <div class="total-cases">
             <div class="title">Total Cases</div>
@@ -53,5 +66,12 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p>Copyright © 2021 Code Monkey Studios</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
