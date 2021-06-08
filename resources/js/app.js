@@ -17,3 +17,38 @@ let app_data = [],
   dates = [];
 
 // GET USERS COUNTRY CODE
+let country_code = geoplugin_countryCode();
+let user_country;
+country_list.forEach((country) => {
+  if (country.code == country_code) {
+    user_country = country.name;
+  }
+});
+
+console.log(country_code);
+
+// API URL AND KEY
+
+function fetchData(user_country) {
+  fetch(
+    `https://covid-19-statistics.p.rapidapi.com/reports?country=${user_country}`,
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "77781d9952msh652064533e934a7p1c14d8jsn17b5c44455c4",
+        "x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
+      },
+    }
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
+fetchData(user_country);
