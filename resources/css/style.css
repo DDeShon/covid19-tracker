@@ -101,5 +101,55 @@ main {
 
 /* ------------ LATEST REPORT ------------ */
 .latest-report {
-  width: ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  color: hsl(0, 0%, 100%);
 }
+
+.country,
+.total-cases,
+.recovered,
+.deaths {
+  height: 100px;
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: hsl(0, 76%, 70%);
+}
+
+.change-country {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.3rem;
+}
+
+.total-cases .value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.recovered .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(209, 100%, 50%);
+}
+
+.deaths .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(0, 100%, 50%);
+}
+
+.new-value {
+  font-size: 1.3rem;
+}
+
+/* ------------ CHART ------------ */
