@@ -92,7 +92,8 @@ main {
 }
 
 /* ------------ BG IMAGE ------------ */
-.stats {
+.stats,
+.about {
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("../img/bg.jpg");
@@ -155,7 +156,7 @@ main {
 /* ------------ CHART ------------ */
 .chart {
   width: 80%;
-  height: 70vh;
+  height: 71.8vh;
   min-height: 500px;
   margin: 0 auto;
   padding: 50px 0;
@@ -196,7 +197,6 @@ main {
 
 .country-list {
   display: flex;
-  /* justify-content: space-between; */
   position: absolute;
   top: 30px;
   width: 400px;
@@ -266,6 +266,35 @@ footer {
 
 .copyright p {
   font-weight: bold;
+}
+
+/* ---------------------------------------------------------- */
+/*                        ABOUT PAGE                          */
+/* ---------------------------------------------------------- */
+.about {
+  padding: 50px 0;
+}
+.about-card {
+  width: 80%;
+  height: 77vh;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  border-radius: 15%;
+}
+
+.about-card h1 {
+  color: hsl(0, 76%, 70%);
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.about-card p {
+  color: hsl(0, 76%, 70%);
+}
+
+.about-card a {
+  color: hsl(209, 100%, 50%);
 }
 
 /* ---------------------------------------------------------- */
