@@ -18,6 +18,7 @@ let app_data = [],
   formattedDates = [];
 
 // GET USERS COUNTRY CODE
+
 let country_code = geoplugin_countryCode();
 let user_country;
 country_list.forEach((country) => {
