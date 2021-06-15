@@ -18,41 +18,37 @@ let app_data = [],
   formattedDates = [];
 
 // GET USERS COUNTRY CODE
+// fetch("https://ipapi.co/country/")
+//   .then((resp) => resp.text())
+//   .then(function (data) {
+//     let country_code = data.results;
+//     return country_code;
+//     console.log(data);
+//   });
 
-function geolocate() {
-  if (window.navigator && window.navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      onGeolocateSuccess,
-      onGeolocateError
-    );
-  }
-}
+//
+//
+//
+fetch("https://ipapi.co/country/")
+  .then(function (response) {
+    response.text().then((txt) => {
+      let country_code = txt;
+      console.log(country_code);
+      return country_code;
+    });
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+//
+//
+//
+//
+//
+//
+//
 
-function onGeolocateSuccess(coordinates) {
-  const location = coordinates.coords;
-  console.log(location);
-}
-
-function onGeolocateError(error) {
-  switch (error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation.";
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable.";
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request has timed out";
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error has occurred.";
-      break;
-  }
-}
-
-geolocate();
-
-let country_code = geoplugin_countryCode();
+// let country_code = geoplugin_countryCode();
 let user_country;
 country_list.forEach((country) => {
   if (country.code == country_code) {
