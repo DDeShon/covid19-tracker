@@ -19,6 +19,34 @@ let app_data = [],
 
 // GET USERS COUNTRY CODE
 
+function geolocate() {
+  if (window.navigator && window.navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      onGeolocateSuccess,
+      onGeolocateError
+    );
+  }
+}
+
+function onGeolocateSuccess(coordinates) {
+  const location = coordinates.coords;
+  console.log(location);
+}
+
+function onGeolocateError(error) {
+  console.warn(error.code, error.message);
+
+  if (error.code === 1) {
+    // User declined
+  } else if (error.code === 2) {
+    // location is unavailable
+  } else if (error.code === 3) {
+    // function timeout
+  }
+}
+
+geolocate();
+
 let country_code = geoplugin_countryCode();
 let user_country;
 country_list.forEach((country) => {
