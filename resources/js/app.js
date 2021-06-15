@@ -32,9 +32,7 @@ let app_data = [],
 fetch("https://ipapi.co/country/")
   .then(function (response) {
     response.text().then((txt) => {
-      let country_code = txt;
-      console.log(country_code);
-      return country_code;
+      console.log(txt);
     });
   })
   .catch(function (error) {
@@ -48,7 +46,7 @@ fetch("https://ipapi.co/country/")
 //
 //
 
-// let country_code = geoplugin_countryCode();
+let country_code = geoplugin_countryCode();
 let user_country;
 country_list.forEach((country) => {
   if (country.code == country_code) {
