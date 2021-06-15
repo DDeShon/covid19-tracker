@@ -34,14 +34,19 @@ function onGeolocateSuccess(coordinates) {
 }
 
 function onGeolocateError(error) {
-  console.warn(error.code, error.message);
-
-  if (error.code === 1) {
-    // User declined
-  } else if (error.code === 2) {
-    // location is unavailable
-  } else if (error.code === 3) {
-    // function timeout
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable.";
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request has timed out";
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error has occurred.";
+      break;
   }
 }
 
