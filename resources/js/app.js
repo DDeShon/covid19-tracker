@@ -18,33 +18,6 @@ let app_data = [],
   formattedDates = [];
 
 // GET USERS COUNTRY CODE
-fetch("https://ipapi.co/json/")
-  .then(res => res.json())
-  .then((data) = > {
-    let country_code = data.results;
-    return country_code;
-    console.log(data);
-  }) 
-
-//
-//
-//
-// fetch("https://ipapi.co/country/")
-//   .then(function (response) {
-//     response.text().then((txt) => {
-//       console.log(txt);
-//     });
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-//
-//
-//
-//
-//
-//
-//
 
 let country_code = geoplugin_countryCode();
 let user_country;
